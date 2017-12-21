@@ -10,8 +10,8 @@
    http://www.springframework.org/schema/mvc/spring-mvc.xsd
    ">
 
-	<context:component-scan base-package="com.niit.onlineshoping.controller" />
-	<context:component-scan base-package="com.niit.shopingbackend.daoimpl" />
+	<context:component-scan base-package="com.niit.onlineshoping" />
+	<context:component-scan base-package="com.niit.shopingbackend" />
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -21,7 +21,4 @@
 	<!-- loading static resources -->
 	<mvc:annotation-driven />
 	<mvc:resources location="/assets/" mapping="/resources/**" />
-
-
-
 </beans>

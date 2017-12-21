@@ -9,11 +9,10 @@
 			<li class="active"><a href="${contextRoot}/home">Home</a></li>
 			<li id="about"><a href="${contextRoot}/about">ABOUT US</a></li>
 			<li id="contact"><a href="${contextRoot}/contact">CONTACT US</a></li>
-			<li id="listproducts"><a href="${contextRoot}/show/all/products">View
-					PRODUCT </a></li>
+			<li id="listproducts"><a href="${contextRoot}/show/all/products">View PRODUCT</a></li>
+			<!--  <li id="listproducts"><a href="${contextRoot}/show/all/products">View PRODUCT </a></li> -->
 			
-			<li id="listproducts"><a href="${contextRoot}/show/all/products">View
-					PRODUCT </a></li>		
+		
 					
 		</ul>
 		<ul class="nav navbar-nav navbar-right">

@@ -73,6 +73,11 @@ fotter {
 	height: 60px;
 }
 
+.dataTableImg {
+width:100px;
+height:100px;	
+}
+
 @media ( min-width : 992px) {
 	body {
 		padding-top: 56px;

@@ -13,8 +13,8 @@
 		<spring.version>4.3.6.RELEASE</spring.version>
 	</properties>
 	<dependencies>
-	
-			<!-- link backend project -->
+
+		<!-- link backend project -->
 		<dependency>
 			<groupId>com.niit</groupId>
 			<artifactId>shopingbackend</artifactId>
@@ -40,14 +40,27 @@
 
 		<!-- spring -->
 
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		
-		
-				<!-- JSTL -->
+
+
+		<!-- JSTL -->
 
 		<dependency>
 			<groupId>jstl</groupId>
