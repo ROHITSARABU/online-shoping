@@ -53,6 +53,41 @@ CREATE TABLE product (
 	CONSTRAINT pk_product_id PRIMARY KEY (id),
  	CONSTRAINT fk_product_category_id FOREIGN KEY (category_id) REFERENCES category(id),
 	CONSTRAINT fk_product_supplier_id FOREIGN KEY (supplier_id) REFERENCES user_detail(id));
+	
+	-- the address table to store the user billing and shipping addresses
+CREATE TABLE address (
+	id IDENTITY,
+	user_id int,
+	address_line_one VARCHAR(100),
+	address_line_two VARCHAR(100),
+	city VARCHAR(20),
+	state VARCHAR(20),
+	country VARCHAR(20),
+	postal_code VARCHAR(10),
+	is_billing BOOLEAN,
+	is_shipping BOOLEAN,
+	CONSTRAINT fk_address_user_id FOREIGN KEY (user_id ) REFERENCES user_detail (id),
+	CONSTRAINT pk_address_id PRIMARY KEY (id)
+);
+
+-- the cart table to store the user cart top-level details
+CREATE TABLE cart (
+	id IDENTITY,
+	user_id int,
+	grand_total DECIMAL(10,2),
+	cart_lines int,
+	CONSTRAINT fk_cart_user_id FOREIGN KEY (user_id ) REFERENCES user_detail (id),
+	CONSTRAINT pk_cart_id PRIMARY KEY (id)
+);
+
+--adding the address
+INSERT INTO ADDRESS (ID, ADDRESS_LINE_ONE,  ADDRESS_LINE_TWO, CITY, STATE,COUNTRY, POSTAL_CODE, IS_BILLING, IS_SHIPPING)
+VALUES ('1', 'no 6, periyar ramasammy st guduvancheri', 'near ration shop', 'guduvancheri', 'tamil nadu','india','603202',0,0);
+
+--adding the cart
+INSERT INTO cart (user_id, grand_total, cart_lines) VALUES (null, 0, 0);
+
+--adding product
 
 
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
